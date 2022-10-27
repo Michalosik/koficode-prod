@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}🤩 Hurra! Mamy Twoją wiadomość!{% endblock %}
+
+{% block body %}
+  <div class="success__container">
+    <h3>Dziękujemy za Twoją wiadomość</h3>
+    <p>Odpowiemy na nią tak szybko jak to możliwe!</p>
+    <div class="return-btn__container">
+      <a href="{{path('index')}}">Powrót</a>
+    </div>
+  </div>
+
+{% endblock %}

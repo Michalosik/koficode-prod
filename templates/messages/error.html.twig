@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}😔 Coś poszło nie tak...{% endblock %}
+
+{% block body %}
+  <div class="error__container">
+    <h3>Coś poszło nie po naszej myśli, prosimy spróbować ponowie wypełnić formularz!</h3>
+    <p style="font-size:1.4rem; font-weight:bold">Uwaga: Jeżeli problem występuje nadal, możesz napisać na adres
+      <a href="mailto:info@koficode.pl">
+        info[at]koficode.pl</a>
+    </p>
+  </div>
+
+  <div class="contact__container">
+    <div class="contact__wrapper-form">
+      {{form_start(contactForm, {'attr': {'class':'contact__form contact__form--error'}})}}
+      <div class="contact__form-control">
+        <label class="contact__form-label" for="name">Imię:</label>
+        {{form_row(contactForm.name, {'attr':{'placeholder':'np. Janek'}})}}
+      </div>
+      <div class="contact__form-control">
+        <label class="contact__form-label contact__form-label--right" for="mail">:Adres email</label>
+        {{form_row(contactForm.mail, {'attr':{'placeholder':'przykladowy@mail.mail.com'}})}}
+      </div>
+      <div class="contact__form-control">
+        <label class="contact__form-label" for="msg">Wiadomość:</label>
+        {{form_row(contactForm.content, {'attr':{'placeholder':'Treść wiadomości'}})}}
+      </div>
+      <div class="contact__form-control">
+        <label class="contact__form-label" for="check">Zgoda na przetwarzanie danych osobowych</label>
+        {{form_row(contactForm.isAgree)}}
+      </div>
+      {{ form_row(contactForm._token) }}
+      <button class="contact__form-btn">Wyślij</button>
+      {{form_end(contactForm)}}
+    </div>
+  </div>
+  <div class="return-btn__container">
+    <a href="{{path('index')}}">Powrót</a>
+  </div>
+{% endblock %}

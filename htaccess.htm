@@ -1,0 +1,8 @@
+<IfModule mod_fcgid.c>
+    <FilesMatch "\.php$">
+        SetHandler fcgid-script
+        FCGIWrapper '/usr/local/safe-bin/fcgid80.sh
+        /usr/local/directadmin/data/users/michal/php/fizjoguidewierzbicki.pl.ini -d
+        mail.log="/home/michal/.php/php-mail.log"' .php
+    </FilesMatch>
+</IfModule>

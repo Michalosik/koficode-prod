@@ -1,0 +1,195 @@
+{% extends 'base.html.twig' %}
+{% block metas %}
+  <meta property="og:title" content="Tworzę strony internetowe dla Ciebie i Twojej firmy"/>
+  <meta property="og:url" content="https://koficode.pl"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:description" content="Tworzę strony internetowe dla Ciebie i Twojej firmy, zajmuję się projektowaniem, programowaniem i hostingiem stron www."/>
+  <meta name="description" content="Tworzę strony internetowe dla Ciebie i Twojej firmy, zajmuję się projektowaniem, programowaniem i hostingiem stron www.">
+  <link rel="canonical" href="https://koficode.pl"/>
+{% endblock %}
+{% block title %}Projektujemy strony internetowe, czyli wizytówkę każdej firmy!{% endblock %}
+{% block javascript_tags %}  
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<script>
+    function onSubmit(token) {
+      document.querySelector('form[name="contact_form"]').submit();
+    }
+  </script>
+  {% endblock %}
+{% block body %}
+  <body data-colors="light">
+    <header data-fixed="false" class="header flex">
+      <div class="navbar__progress-bar"></div>
+      <div data-fixed="false" class="header__logo">
+        <a href="/" class="nav-item"><img src="/assets/img/logo.svg" alt="logo Koficode" width="100%" height="100%"></a>
+      </div>
+      <button data-fixed="false" class="menu__toggle-btn" aria-controls="
+      navigation" aria-expanded="false">
+        <span class="sr-only">Menu</span>
+      </button>
+      <nav class="navbar">
+        <ul id="navigation" data-visible="false" class="navbar__list flex">
+          <li>
+            <a href="#offer" class="navbar__list-item ornament ornament--left nav-item">oferta</a>
+          </li>
+          <li>
+            <a href="#projects" class="navbar__list-item ornament ornament--right nav-item">projekty</a>
+          </li>
+          <li>
+            <a href="#contact" class="navbar__list-item ornament ornament--left nav-item">kontakt</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="landpage" class="landpage section">
+        <header class="section__header">
+          <h1 class="section__header-text">Cześć,</br>projektuję
+          <span class="bold-text">strony WWW</span>!</h2>
+        <div class="section__ornament"></div>
+      </header>
+      <div class="landpage__wrapper">
+        <div class="landpage__container">
+          <div class="landpage__container-text">
+            <h2>Zajmuję się projektowaniem i tworzeniem stron internetowych</h2>
+            <div class="landpage__container-social flex">
+              <a class="landpage__container-social-item" href="https://github.com/Michalosik" rel="nofollow" target="_blank">
+                <span class="sr-only">Profil na github</span>
+                <i class="fab fa-github"></i>
+              </a>
+              <a class="landpage__container-social-item" href="https://www.linkedin.com/in/michal-balinski-koficode" rel="nofollow" target="_blank">
+                <span class="sr-only">Profil na linkedin</span>
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <img class="landpage__img" src="/assets/img/me-dark.webp"/ alt="Zdjęcie twarzy web developera Michała">
+      </div>
+    </section>
+    <section id="offer" class="offer section">
+      <header class="section__header">
+        <h2 class="section__header-text">Oferta</h2>
+        <div class="section__ornament"></div>
+      </header>
+      <div class="offer__container">
+        <div class="offer__text-wrapper">
+          <h3 class="offer__text">
+            <span class="bold-text">Stworzę</span>
+            w sieci miejsce dla Twojej firmy.</h3>
+          <div class="offer__text-ornament"></div>
+          <h3 class="offer__text">Potrzebujesz
+            <span class="bold-text">Strony wizytówki</span>?</h3>
+          <div class="offer__text-ornament"></div>
+          <h3 class="offer__text">A może
+            <span class="bold-text">Landing Page</span>
+            do nowej kampanii?</h3>
+          <div class="offer__text-ornament"></div>
+          <h3 class="offer__text">Przejdź do sekcji
+            <span class="bold-text">kontakt</span>
+            i poproś o wycenę!
+          </h3>
+        </div>
+        <div class="offer__img" title="biuro programisty"></div>
+      </section>
+      <section id="projects" class="projects section">
+        <header class="section__header section__header--right">
+          <h2 class="section__header-text">Projekty</h2>
+          <div class="section__ornament"></div>
+        </header>
+        <div class="projects__container">
+          <div class="projects__wrapper">
+            <div class="projects__item-text" title="CountItDown!">
+              <p>Aplikacja pozwalająca dodać odmierzacze czasu (od dzisiaj do wybranej daty).
+              </p>
+              <div class="projects__item-social flex">
+                <a href="https://michalosik.github.io/countdowner" rel="nofollow" target="_blank">
+                  <span class="sr-only">Wersja live</span>
+                  <i class="fas fa-globe"></i>
+                </a>
+                <a href="https://github.com/Michalosik/countdowner" rel="nofollow" target="_blank">
+                  <span class="sr-only">Kod na github</span>
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+            <div class="projects__item-img" data-src="/assets/img/count.webp"></div>
+          </div>
+          <div class="projects__wrapper">
+            <div class="projects__item-text" title="Fizjoguide">
+              <p>Strona wizytówka z blogiem stworzona na potrzeby fizjoterapeuty</p>
+              <div class="projects__item-social">
+                <a href="https://fizjoguidewierzbicki.pl" rel="nofollow" target="_blank">
+                  <span class="sr-only">Wersja live</span>
+                  <i class="fas fa-globe"></i>
+                </a>
+              </div>
+            </div>
+            <div class="projects__item-img projects__item-img--left" data-src="/assets/img/fizjo.webp"></div>
+          </div>
+        </section>
+        <section id="contact" class="contact section">
+          <header class="section__header">
+            <h2 class="section__header-text">Kontakt</h2>
+            {% for message in app.flashes ('success')%}
+              <div class="contact__message-box contact__message-box--success">
+                <p>{{message}}</p>
+              </div>
+            {% endfor %}
+            {% for message in app.flashes ('error')%}
+              <div class="contact__message-box contact__message-box--error">
+                <p>{{message}}</p>
+              </div>
+            {% endfor %}
+            {% for message in app.flashes ('empty')%}
+              <div class="contact__message-box contact__message-box--error">
+                <p>{{message}}</p>
+              </div>
+            {% endfor %}
+          </header>
+          <div class="contact__container">
+            <div class="contact__wrapper-form">
+              {{form_start(contactForm, {'attr': {'class':'contact__form'}})}}
+              <div class="contact__form-control">
+                <label class="contact__form-label" for="name">Imię:</label>
+                {{form_row(contactForm.name, {'attr':{'placeholder':'np. Janek'}})}}
+              </div>
+              <div class="contact__form-control">
+                <label class="contact__form-label contact__form-label--right" for="mail">:Adres email</label>
+                {{form_row(contactForm.mail, {'attr':{'placeholder':'przykladowy@mail.mail.com'}})}}
+              </div>
+              <div class="contact__form-control">
+                <label class="contact__form-label" for="msg">Wiadomość:</label>
+                {{form_row(contactForm.content, {'attr':{'placeholder':'Treść wiadomości'}})}}
+              </div>
+              <div class="contact__form-control">
+                <label class="contact__form-label" for="check">Zgoda na przetwarzanie danych osobowych</label>
+                {{form_row(contactForm.isAgree)}}
+              </div>
+                {{ form_row(contactForm.hp) }}
+              {{ form_row(contactForm._token) }}
+              <button class="contact__form-btn g-recaptcha" data-sitekey="6LeNzqAhAAAAANxsPaUuENX85xABN2u4i1JW12X4" data-callback='onSubmit' data-action='submit'>Wyślij</button>
+              {{form_end(contactForm)}}
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <p>&copy; Michał Baliński |
+          <span class="copy-date"></span></p>
+      </footer>
+
+      <nav class="navbar-bottom">
+        <ul>
+          <li>
+            <a aria-hidden="true" data-button="left" href="#offer">oferta</a>
+          </li>
+          <li>
+            <a aria-hidden="true" data-button="right" href="#contact">kontakt</a>
+          </li>
+        </ul>
+      </nav>
+      <script src="/assets/js/main.min.js"></script>
+      <script src="https://kit.fontawesome.com/7a1ace2c47.js" crossorigin="anonymous"></script>
+    </body>
+  {% endblock %}
