@@ -26,7 +26,7 @@ class IndexController extends AbstractController
        	$recaptchaToken = $request->get('g-recaptcha-response');
         $url = 'https://www.google.com/recaptcha/api/siteverify';
         $data = [
-            'secret' => 'xxxxxxxxxxxxxxxxxxx',
+            'secret' => 'It's secret key right now :)',
             'response' => $recaptchaToken,
         ];
         $options = [
